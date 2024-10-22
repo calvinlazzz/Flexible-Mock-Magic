@@ -1,21 +1,34 @@
 /* BASE STYLES */
 * {
     font-family: sans-serif;
-    font-size: 20px
+    font-size: 20px;
 }
 .navbar {
     width: 100vw;
     background-color: #59D9A1;
-    padding-left: 30px;
+   
     padding-right: 10px;
+    display: flex;
+    
+    /* justify-content: flex-end;
+    position: relative; Add this line */
+    z-index: 2; /* Add this line */
+    padding-right: 100px;
 }
   
 .logo {
     display: inline-block;
 }
-  
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 .nav-links {
     list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-left: 800px;
 }
   
 .nav-item a {
@@ -23,6 +36,7 @@
     padding: 10px 15px;
     text-decoration: none;
     color: white;
+    
 }
   
 .nav-item:hover {
@@ -41,12 +55,26 @@
 .logo img {
     width: 15%;
     vertical-align: middle;
+    float: left;
 }
 
 .sidebar {
     background-color: #242457;
     color: white;
     padding: 3rem;
+    float: left;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1; /* Add this line */
+   
+    
+}
+.sidebar p {
+    padding: 10px;
+    margin-bottom: 400px;
+    cursor: pointer;
 }
 
 footer img {
@@ -75,6 +103,9 @@ footer {
     width: 100%;
     padding: 1rem;
     background-color: #59D9A1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* CODE YOUR FLEXBOXES HERE */
